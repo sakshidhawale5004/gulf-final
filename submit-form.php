@@ -64,9 +64,10 @@ if (isset($data['service']) && isset($data['country'])) {
     $form_type = 'Contact';
 } elseif (isset($data['users'])) {
     $form_type = 'Subscription';
-} elseif (isset($data['fileUpload']) || (isset($data['firstName']) && !isset($data['service']) && !isset($data['users']) && !isset($data['country']))) {
-    // Default: if has file upload or basic fields without service/country/users, it's either Appointment or Search Update
-    $form_type = 'Appointment'; // Will be updated if we detect it's a search update
+} elseif (isset($data['fileUpload'])) {
+    $form_type = 'Search';
+} elseif (isset($data['firstName']) && !isset($data['service']) && !isset($data['users']) && !isset($data['country'])) {
+    $form_type = 'Appointment';
 } else {
     $form_type = 'General'; // Fallback
 }

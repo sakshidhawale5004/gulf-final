@@ -161,9 +161,15 @@ $conn->close();
             background-color: #f3e5f5;
             color: #7b1fa2;
         }
-        .badge-demo {
-            background-color: #e3f2fd;
-            color: #0288d1;
+        
+        .badge-search {
+            background-color: #e0f7fa;
+            color: #00838f;
+        }
+        
+        .badge-payment {
+            background-color: #ffe7f3;
+            color: #cc0066;
         }
         
         
@@ -265,7 +271,6 @@ $conn->close();
                                 <option value="Contact" <?php echo $filterType === 'Contact' ? 'selected' : ''; ?>>Contact / Service Inquiry</option>
                                 <option value="Subscription" <?php echo $filterType === 'Subscription' ? 'selected' : ''; ?>>Subscription Request</option>
                                 <option value="Appointment" <?php echo $filterType === 'Appointment' ? 'selected' : ''; ?>>Book Appointment</option>
-                                <option value="Demo" <?php echo $filterType === 'Demo' ? 'selected' : ''; ?>>Book Demo</option>
                                 <option value="Search" <?php echo $filterType === 'Search' ? 'selected' : ''; ?>>Update Search</option>
                                 <option value="Payment" <?php echo $filterType === 'Payment' ? 'selected' : ''; ?>>Payment</option>
                             </select>
@@ -317,7 +322,8 @@ $conn->close();
                                             $badgeClass = 'badge-contact';
                                             if ($type === 'Subscription') $badgeClass = 'badge-subscription';
                                             elseif ($type === 'Appointment') $badgeClass = 'badge-appointment';
-                                            elseif ($type === 'Demo') $badgeClass = 'badge-demo';
+                                            elseif ($type === 'Search') $badgeClass = 'badge-search';
+                                            elseif ($type === 'Payment') $badgeClass = 'badge-payment';
                                             ?>
                                             <span class="badge-type <?php echo $badgeClass; ?>"><?php echo $type; ?></span>
                                         </td>
