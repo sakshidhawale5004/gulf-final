@@ -672,8 +672,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-wave svg {
     display: block;
-    width: 100%;
+    width: calc(100% + 4px);
     height: 120px;
+    margin-left: -2px;
 }
 .footer-heading {
     color: white;
