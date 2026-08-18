@@ -74,7 +74,7 @@ if (isset($data['form_type'])) {
 }
 
 // Prepare data
-$firstName = $conn->real_escape_string($data['firstName']);
+$firstName = isset($data['firstName']) ? $conn->real_escape_string($data['firstName']) : '';
 $lastName = isset($data['lastName']) ? $conn->real_escape_string($data['lastName']) : '';
 $email = $conn->real_escape_string($email);
 $phone = isset($data['phone']) ? $conn->real_escape_string($data['phone']) : '';
