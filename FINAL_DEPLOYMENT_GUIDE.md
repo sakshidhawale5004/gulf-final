@@ -109,13 +109,13 @@ Appointment/Search → form_type = 'Appointment'
 ### **When a form is submitted:**
 
 1. ✅ Data saved to database
-2. ✅ Email sent to: `admin@gulftp.com`
+2. ✅ Email sent to: `connect@gulftp.com`
 3. ✅ Confirmation email sent to user
 4. ✅ Success message shown on form
 
 ### **Email Configuration:**
 ```
-Admin Email: admin@gulftp.com
+Admin Email: connect@gulftp.com
 Noreply Email: noreply@gulftp.com
 Support Phone: +971 581711600
 ```
@@ -299,7 +299,7 @@ public_html/gulftp/
 ### **Issue: Emails not received**
 **Solution:**
 1. Check spam/junk folder
-2. Verify `admin@gulftp.com` is correct
+2. Verify `connect@gulftp.com` is correct
 3. Check Hostinger email settings
 4. Enable SMTP if needed
 
@@ -308,7 +308,7 @@ public_html/gulftp/
 ## 📞 Support
 
 ### **Contact Information:**
-- Email: admin@gulftp.com
+- Email: connect@gulftp.com
 - Phone: +971 581711600
 - Website: https://gulftp.com
 
@@ -380,4 +380,4 @@ Your GulfTP form management system is now **fully operational** with:
 
 ---
 
-For questions or issues, contact: admin@gulftp.com
+For questions or issues, contact: connect@gulftp.com

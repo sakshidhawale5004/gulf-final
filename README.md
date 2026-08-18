@@ -56,7 +56,7 @@ All automatically detect type and store data:
 - Access analytics
 
 ### ✅ Email System
-- Admin notifications to: admin@gulftp.com
+- Admin notifications to: connect@gulftp.com
 - User confirmation emails
 - HTML-formatted messages
 - Automatic sending
@@ -89,7 +89,7 @@ Password: admin@2024
 ### **Email Settings:**
 Located in: `.env`
 ```
-ADMIN_EMAIL=admin@gulftp.com
+ADMIN_EMAIL=connect@gulftp.com
 NOREPLY_EMAIL=noreply@gulftp.com
 ```
 
@@ -142,7 +142,7 @@ https://gulftp.com/test-db.php
 
 ## 📞 Support
 
-- Admin: admin@gulftp.com
+- Admin: connect@gulftp.com
 - Phone: +971 581711600
 - Dashboard: https://gulftp.com/admin/dashboard-simple.php
 

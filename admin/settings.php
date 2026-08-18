@@ -213,6 +213,7 @@ if ($conn) {
             border-radius: 6px;
         }
     </style>
+        <link rel="icon" type="image/jpeg" href="../favicon-final.jpeg">
 </head>
 <body>
     <div class="d-flex">
@@ -332,7 +333,6 @@ if ($conn) {
                                 <div class="mb-3">
                                     <label class="form-label">Current Password</label>
                                     <input type="password" class="form-control" name="current_password" required placeholder="Enter your current password">
-                                    <small class="text-muted">Demo: admin@2024</small>
                                 </div>
                                 
                                 <div class="mb-3">
@@ -362,7 +362,8 @@ if ($conn) {
                         <div class="settings-section">
                             <h6>Email Settings</h6>
                             <div class="info-box highlight">
-                                <strong>Admin Email:</strong> admin@gulftp.com
+                                <strong>Primary Email:</strong> <?php echo defined('ADMIN_EMAIL') ? ADMIN_EMAIL : 'connect@gulftp.com'; ?><br>
+                                <strong>Parent Email:</strong> <?php echo defined('PARENT_EMAIL') ? PARENT_EMAIL : 'admin@gulftp.com'; ?>
                             </div>
                             <div class="info-box highlight">
                                 <strong>Noreply Email:</strong> noreply@gulftp.com
@@ -525,7 +526,7 @@ if ($conn) {
                         <div class="settings-section">
                             <h6>Getting Help</h6>
                             <div class="info-box">
-                                <strong>Admin Email:</strong> admin@gulftp.com
+                                <strong>Email:</strong> <?php echo defined('ADMIN_EMAIL') ? ADMIN_EMAIL : 'connect@gulftp.com'; ?>
                             </div>
                             <div class="info-box">
                                 <strong>Phone:</strong> +971 581711600

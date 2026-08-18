@@ -213,6 +213,7 @@ $conn->close();
             margin-top: 20px;
         }
     </style>
+        <link rel="icon" type="image/jpeg" href="../favicon-final.jpeg">
 </head>
 <body>
     <div class="d-flex">
@@ -271,6 +272,7 @@ $conn->close();
                                 <option value="Contact" <?php echo $filterType === 'Contact' ? 'selected' : ''; ?>>Contact / Service Inquiry</option>
                                 <option value="Subscription" <?php echo $filterType === 'Subscription' ? 'selected' : ''; ?>>Subscription Request</option>
                                 <option value="Appointment" <?php echo $filterType === 'Appointment' ? 'selected' : ''; ?>>Book Appointment</option>
+                                <option value="Demo" <?php echo $filterType === 'Demo' ? 'selected' : ''; ?>>Book a Demo</option>
                                 <option value="Search" <?php echo $filterType === 'Search' ? 'selected' : ''; ?>>Update Search</option>
                                 <option value="Payment" <?php echo $filterType === 'Payment' ? 'selected' : ''; ?>>Payment</option>
                             </select>

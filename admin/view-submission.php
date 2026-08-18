@@ -160,6 +160,7 @@ $formData = json_decode($submission['form_data'], true);
             color: var(--primary-green);
         }
     </style>
+        <link rel="icon" type="image/jpeg" href="../favicon-final.jpeg">
 </head>
 <body>
     <!-- Topbar -->

@@ -125,6 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 48px;
         }
     </style>
+        <link rel="icon" type="image/jpeg" href="../favicon-final.jpeg">
 </head>
 <body>
     <div class="login-container">
@@ -160,14 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </button>
         </form>
 
-        <div class="login-footer">
-            <p style="margin: 0; color: #999;">
-                <i class="fa-solid fa-info-circle me-1"></i>
-                Demo Credentials:<br>
-                Username: <strong>admin</strong><br>
-                Password: <strong>admin@2024</strong>
-            </p>
-        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

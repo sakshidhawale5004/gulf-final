@@ -152,7 +152,7 @@ if (isset($data['service']) && isset($data['country'])) {
 
 When a form is submitted:
 
-1. **Admin receives:** HTML-formatted email to `admin@gulftp.com` with:
+1. **Admin receives:** HTML-formatted email to `connect@gulftp.com` with:
    - All submitted data
    - Form type
    - Submission timestamp
@@ -196,7 +196,7 @@ All submissions are stored in the `form_responses` database table:
 - [ ] Filter by Contact shows only contact forms
 - [ ] Filter by Subscription shows only subscription forms
 - [ ] Filter by Appointment shows only appointment/search forms
-- [ ] Email sent to admin@gulftp.com
+- [ ] Email sent to connect@gulftp.com
 - [ ] Confirmation email sent to user's email
 - [ ] View Submission page shows all details correctly
 - [ ] Success message displays on form after submission

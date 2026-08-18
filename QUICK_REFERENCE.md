@@ -101,12 +101,12 @@ if (isset($data['service']) && isset($data['country'])) {
 
 ### When Form is Submitted:
 1. ✅ Data saved to `form_responses` table
-2. ✅ Email sent to `admin@gulftp.com` with all details
+2. ✅ Email sent to `connect@gulftp.com` with all details
 3. ✅ Confirmation email sent to user
 4. ✅ Success message shown on frontend
 
 ### Email Configuration
-- Admin email: `admin@gulftp.com`
+- Admin email: `connect@gulftp.com`
 - Reply-to: User's email
 - Format: HTML with styled layout
 - Set in `.env` file
@@ -121,7 +121,7 @@ DB_HOST=localhost
 DB_USER=u852823366_admin
 DB_PASS=Gulftp@1234
 DB_NAME=u852823366_gulftp
-ADMIN_EMAIL=admin@gulftp.com
+ADMIN_EMAIL=connect@gulftp.com
 STRIPE_SECRET_KEY=sk_live_...
 ```
 
@@ -163,7 +163,7 @@ STRIPE_SECRET_KEY=sk_live_...
 - [ ] `config.php` readable by PHP
 - [ ] All 4 forms tested and working
 - [ ] Admin dashboard accessible
-- [ ] Emails receiving to admin@gulftp.com
+- [ ] Emails receiving to connect@gulftp.com
 - [ ] Confirmation emails sent to users
 - [ ] Admin credentials set (admin/admin@2024)
 - [ ] SSL certificate installed (HTTPS)
@@ -192,7 +192,7 @@ STRIPE_SECRET_KEY=sk_live_...
    - Check admin dashboard
 
 5. **Test emails**
-   - Verify emails received at admin@gulftp.com
+   - Verify emails received at connect@gulftp.com
    - Check user confirmation emails
 
 6. **Go Live**
@@ -214,7 +214,7 @@ STRIPE_SECRET_KEY=sk_live_...
 - Check Hostinger mail settings
 - Verify SMTP is configured
 - Check spam folder
-- Test with admin@gulftp.com directly
+- Test with connect@gulftp.com directly
 
 ### Admin dashboard empty?
 - Verify you're logged in correctly
@@ -262,8 +262,8 @@ DELETE FROM form_responses WHERE id = 123;
 ## 📞 Support
 
 ### Important Emails
-- Admin: admin@gulftp.com
-- Support: admin@gulftp.com
+- Admin: connect@gulftp.com
+- Support: connect@gulftp.com
 
 ### Hosting Support
 - Hostinger: https://www.hostinger.com/support

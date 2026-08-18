@@ -240,6 +240,7 @@ $conn->close();
             color: #cc0066;
         }
     </style>
+        <link rel="icon" type="image/jpeg" href="../favicon-final.jpeg">
 </head>
 <body>
     <div class="d-flex">

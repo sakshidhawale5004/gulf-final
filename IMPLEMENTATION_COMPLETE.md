@@ -86,7 +86,7 @@ Your form management system is **fully implemented and ready for testing**. Here
 
 ### ✅ 7. Email System
 - **HTML-formatted emails** with professional styling
-- **Admin emails to:** admin@gulftp.com
+- **Admin emails to:** connect@gulftp.com
   - All form data with details
   - Submission timestamp
   - Submitter IP address
@@ -207,7 +207,7 @@ gulftp/
 - [ ] Submit form
 - [ ] See success message
 - [ ] Check admin dashboard → should show "Contact" type
-- [ ] Check email received at admin@gulftp.com
+- [ ] Check email received at connect@gulftp.com
 
 ### Test Form 2: Subscription
 - [ ] Go to `/buy-subscription.html`
@@ -215,7 +215,7 @@ gulftp/
 - [ ] Submit form
 - [ ] See success message
 - [ ] Check admin dashboard → should show "Subscription" type
-- [ ] Check email received at admin@gulftp.com
+- [ ] Check email received at connect@gulftp.com
 
 ### Test Form 3: Appointment
 - [ ] Go to `/book-an-appointment.html`
@@ -223,7 +223,7 @@ gulftp/
 - [ ] Submit form
 - [ ] See success message
 - [ ] Check admin dashboard → should show "Appointment" type
-- [ ] Check email received at admin@gulftp.com
+- [ ] Check email received at connect@gulftp.com
 
 ### Test Form 4: Update Search
 - [ ] Go to `/update-a-search.html`
@@ -232,7 +232,7 @@ gulftp/
 - [ ] Submit form
 - [ ] See success message
 - [ ] Check admin dashboard → should show "Appointment" type
-- [ ] Check email received at admin@gulftp.com
+- [ ] Check email received at connect@gulftp.com
 
 ### Admin Dashboard
 - [ ] Go to `/admin/login.php`
@@ -311,7 +311,7 @@ Before going live to Hostinger:
 - [ ] Update `.env` with Hostinger credentials
 - [ ] Set admin credentials in login.php
 - [ ] Configure SMTP for emails (or use Hostinger mail)
-- [ ] Set correct admin email (admin@gulftp.com)
+- [ ] Set correct admin email (connect@gulftp.com)
 
 ### Testing
 - [ ] Test form 1 (Contact)
@@ -350,7 +350,7 @@ Database: u852823366_gulftp (from .env)
 ### Email Setup
 - Use Hostinger's mail service
 - or configure SMTP in .env
-- Emails go to: admin@gulftp.com
+- Emails go to: connect@gulftp.com
 
 ### File Permissions
 - PHP files: 644 or 755
@@ -432,7 +432,7 @@ Created for your reference:
 
 1. **Test all 4 forms** using FORM_TESTING_GUIDE.md
 2. **Verify admin dashboard** works correctly
-3. **Check email delivery** to admin@gulftp.com
+3. **Check email delivery** to connect@gulftp.com
 4. **Deploy to Hostinger** using credentials in .env
 5. **Monitor submissions** in admin dashboard
 6. **Gather feedback** from team
@@ -457,7 +457,7 @@ Your GulfTP form management system is now:
 
 ## 📞 Support References
 
-- **Admin Email:** admin@gulftp.com
+- **Admin Email:** connect@gulftp.com
 - **Admin Login:** /admin/login.php
 - **Demo Credentials:** admin / admin@2024
 - **Database:** form_responses table

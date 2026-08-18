@@ -50,7 +50,8 @@ define('STRIPE_SECRET_KEY', $_ENV['STRIPE_SECRET_KEY'] ?? '');
 define('STRIPE_PUBLISHABLE_KEY', $_ENV['STRIPE_PUBLISHABLE_KEY'] ?? '');
 
 // Email Configuration
-define('ADMIN_EMAIL', $_ENV['ADMIN_EMAIL'] ?? 'admin@gulftp.com');
+define('ADMIN_EMAIL', $_ENV['ADMIN_EMAIL'] ?? 'connect@gulftp.com');
+define('PARENT_EMAIL', $_ENV['PARENT_EMAIL'] ?? 'admin@gulftp.com');
 define('NOREPLY_EMAIL', $_ENV['NOREPLY_EMAIL'] ?? 'noreply@gulftp.com');
 define('PHONE', $_ENV['PHONE'] ?? '+971 581711600');
 

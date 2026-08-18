@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="gulfApp">
 <head>
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GulfTP - Transfer Pricing Data</title>
+    <title>GulfTP - Premier GCC Transfer Pricing Database</title>
+    <meta name="description" content="GulfTP is the premier transfer pricing benchmarking database built entirely for the GCC region. Elevate your financial strategies with high-precision data.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gulftp.com/">
+    <meta property="og:title" content="GulfTP - Premier GCC Transfer Pricing Database">
+    <meta property="og:description" content="GulfTP is the premier transfer pricing benchmarking database built entirely for the GCC region. Elevate your financial strategies with high-precision data.">
+    <meta property="og:site_name" content="GulfTP">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "GulfTP",
+      "url": "https://www.gulftp.com/"
+    }
+    </script>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,6 +40,7 @@
       gtag('config', 'G-MGY56NN41Z');
     </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="icon" type="image/jpeg" href="favicon-final.jpeg">
 </head>
 
 <body ng-controller="MainController">
@@ -32,7 +51,7 @@
             <div class="row align-items-center">
                 <div data-aos="fade-up" class="col-md-6">
                     <ul class="top-info">
-                        <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
+                        <li><i class="fa-solid fa-envelope"></i> connect@gulftp.com</li>
                         <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
                     </ul>
                 </div>
@@ -73,11 +92,17 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="uae-transfer-pricing.html">United Arab Emirates</a></li>
                                 <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html">Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="kuwait-transfer-pricing.html">Kuwait</a></li>
                                 <li><a class="dropdown-item" href="qatar-transfer-pricing.html">Qatar</a></li>
                                 <li><a class="dropdown-item" href="bahrain-transfer-pricing.html">Bahrain</a></li>
-                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html">Egypt</a></li>
                                 <li><a class="dropdown-item" href="oman-transfer-pricing.html">Oman</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Wider Middle East</h6></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html">Egypt</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="our-data-methodology.html">Data & Methodology</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
@@ -595,9 +620,9 @@
                         <h2 class="text-white mb-3" style="font-size: 2.0rem; text-shadow: 0 2px 8px rgba(0,0,0,0.7); font-weight: 500;">Newsletter</h2>
                         <p class="mb-4" style="font-size: 1.15rem; text-shadow: 0 1px 4px rgba(0,0,0,0.7);">Get the latest market updates.<br>Subscribe to our Newsletter today!</p>
                         
-                        <form ng-submit="subscribeNewsletter()">
+                        <form class="newsletter-form">
                             <div class="d-flex flex-column gap-3">
-                                <input type="email" class="form-control p-3 rounded-0 border-0" placeholder="Enter your email" ng-model="userEmail" required style="max-width: 600px; background: rgba(255,255,255,0.95); color: #333;">
+                                <input type="email" class="form-control p-3 rounded-0 border-0" placeholder="Enter your email" name="email" required style="max-width: 600px; background: rgba(255,255,255,0.95); color: #333;">
                                 <button type="submit" class="btn rounded-0 align-self-start px-5 py-2 fw-bold text-white" style="background-color: #08664b; border: none; font-size: 1rem;">Submit</button>
                             </div>
                         </form>
@@ -786,8 +811,8 @@
                     <!-- Glowing Newsletter Signup -->
                     <div class="footer-newsletter mt-4">
                         <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
-                        <form ng-submit="subscribeNewsletter()" class="position-relative">
-                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" ng-model="userEmail" required>
+                        <form class="newsletter-form position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" name="email" required>
                             <button class="btn footer-submit-btn" type="submit">
                                 <i class="fa-solid fa-paper-plane"></i>
                             </button>
@@ -809,6 +834,7 @@
                     <a href="book-search.html" class="footer-link">Book a Search</a>
                     <a href="book-a-demo.html" class="footer-link">Book a Demo</a>
                     <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    <a href="our-data-methodology.html" class="footer-link">Data & Methodology</a>
                     <a href="about.html" class="footer-link">About Us</a>
                     <a href="contact.html" class="footer-link">Contact Us</a>
                 </div>
@@ -816,7 +842,7 @@
                 <!-- Contact & Socials -->
                 <div data-aos="fade-up" class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
                     <h5 class="footer-heading">Contact</h5>
-                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:connect@gulftp.com">connect@gulftp.com</a></p>
                     <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
                     
                     <div class="social-icons-modern">
@@ -871,6 +897,69 @@
             });
         });
     </script>
+
+<!-- Newsletter Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const newsletterForms = document.querySelectorAll('.newsletter-form');
+    newsletterForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const emailInput = form.querySelector('input[type="email"]');
+            const originalBtnHTML = submitBtn.innerHTML;
+            
+            // Create or get message container
+            let msgContainer = form.nextElementSibling;
+            if (!msgContainer || !msgContainer.classList.contains('newsletter-msg')) {
+                msgContainer = document.createElement('div');
+                msgContainer.classList.add('newsletter-msg', 'mt-2', 'small');
+                form.parentNode.insertBefore(msgContainer, form.nextSibling);
+            }
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            msgContainer.style.display = 'none';
+            
+            const data = {
+                form_type: 'Newsletter',
+                email: emailInput.value
+            };
+            
+            fetch('submit-form-simple.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                
+                msgContainer.style.display = 'block';
+                if (result.success) {
+                    msgContainer.innerHTML = '<span class="text-success"><i class="fa-solid fa-check-circle me-1"></i> Subscribed successfully!</span>';
+                    form.reset();
+                    setTimeout(() => { msgContainer.style.display = 'none'; }, 5000);
+                } else {
+                    msgContainer.innerHTML = '<span class="text-danger"><i class="fa-solid fa-exclamation-circle me-1"></i> ' + (result.error || "Subscription failed.") + '</span>';
+                }
+            })
+            .catch(error => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                msgContainer.style.display = 'block';
+                msgContainer.innerHTML = '<span class="text-danger"><i class="fa-solid fa-exclamation-circle me-1"></i> An error occurred.</span>';
+                console.error('Error:', error);
+            });
+        });
+    });
+});
+</script>
 </body>
+
 
 </html>

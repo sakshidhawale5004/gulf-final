@@ -31,6 +31,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
+    color: var(--primary-green);
     letter-spacing: -0.02em;
 }
 
@@ -824,18 +825,22 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 15px;
     position: relative;
     z-index: 2;
+    color: white !important;
 }
 
 .hero-breadcrumb, .breadcrumb-text {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem;
+    color: white !important;
     position: relative;
     z-index: 2;
 }
 
 .hero-breadcrumb a, .breadcrumb-text a {
-    color: white;
+    color: white !important;
     text-decoration: none;
+}
+.hero-breadcrumb a:hover, .breadcrumb-text a:hover {
+    color: var(--primary-orange) !important;
 }
 
 /* Common Section Styles */
@@ -1724,4 +1729,8 @@ section img,
     0% { left: -100%; }
     20% { left: 200%; }
     100% { left: 200%; }
+}
+h1, h2, h3, .h1, .h2, .h3 {
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em;
 }

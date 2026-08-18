@@ -15,12 +15,14 @@
 <style>
 .page-hero {
             background: linear-gradient(rgba(10, 107, 79, 0.85), rgba(10, 107, 79, 0.85)), url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&t=1') center/cover no-repeat;
-            padding: 80px 0;
+            background-blend-mode: normal;
+            padding: 60px 0;
             text-align: center;
             color: white;
         }
 </style>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="icon" type="image/jpeg" href="favicon-final.jpeg">
 </head>
 <body ng-controller="ServicesController">
 
@@ -30,7 +32,7 @@
             <div class="row align-items-center">
                 <div data-aos="fade-up" class="col-md-6">
                     <ul class="top-info">
-                        <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
+                        <li><i class="fa-solid fa-envelope"></i> connect@gulftp.com</li>
                         <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
                     </ul>
                 </div>
@@ -71,11 +73,17 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="uae-transfer-pricing.html">United Arab Emirates</a></li>
                                 <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html">Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="kuwait-transfer-pricing.html">Kuwait</a></li>
                                 <li><a class="dropdown-item" href="qatar-transfer-pricing.html">Qatar</a></li>
                                 <li><a class="dropdown-item" href="bahrain-transfer-pricing.html">Bahrain</a></li>
-                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html">Egypt</a></li>
                                 <li><a class="dropdown-item" href="oman-transfer-pricing.html">Oman</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Wider Middle East</h6></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html">Egypt</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="our-data-methodology.html">Data & Methodology</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
@@ -99,10 +107,19 @@
 
     <section data-aos="fade-up" class="page-hero">
         <div class="container">
-            <h1>Services Database</h1>
-            <div class="breadcrumb-text">
+            <h1 class="text-white">Services Database</h1>
+            <div class="breadcrumb-text text-white">
                 <a href="#">Home</a> / Services Database
             </div>
+        </div>
+    </section>
+
+    <!-- Methodology Link Banner -->
+    <section class="py-3" style="background-color: var(--primary-green-dark);">
+        <div class="container text-center">
+            <a href="our-data-methodology.html" class="text-white text-decoration-none" style="font-size: 1.1rem; font-weight: 500;">
+                <i class="fa-solid fa-book-open me-2 text-warning"></i> Learn about our Data & Methodology <i class="fa-solid fa-arrow-right ms-2 text-warning"></i>
+            </a>
         </div>
     </section>
 
@@ -294,11 +311,11 @@
 
     <!-- Banner Section Before Action Grid -->
     <!-- Using Unsplash banner image -->
-    <section class="banner-section" style="position: relative; padding: 80px 0; text-align: center; color: white; overflow: hidden; margin: 80px 0 60px 0;">
+    <section class="banner-section" style="position: relative; padding: 60px 0; text-align: center; color: white; overflow: hidden; margin: 80px 0 60px 0;">
         <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&t=1" alt="Banner" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10, 107, 79, 0.7), rgba(10, 107, 79, 0.7)); z-index: 2;"></div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10, 107, 79, 0.85), rgba(10, 107, 79, 0.85)); z-index: 2;"></div>
         <div class="container" style="position: relative; z-index: 3;">
-            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 15px;">Ready to Get Started?</h2>
+            <h2 class="text-white" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 15px;">Ready to Get Started?</h2>
             <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 0;">Choose the option that best fits your Transfer Pricing needs</p>
         </div>
     </section>
@@ -365,8 +382,8 @@
                     <!-- Glowing Newsletter Signup -->
                     <div class="footer-newsletter mt-4">
                         <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
-                        <form ng-submit="subscribeNewsletter()" class="position-relative">
-                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" ng-model="userEmail" required>
+                        <form class="newsletter-form position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" name="email" required>
                             <button class="btn footer-submit-btn" type="submit">
                                 <i class="fa-solid fa-paper-plane"></i>
                             </button>
@@ -388,6 +405,7 @@
                     <a href="book-search.html" class="footer-link">Book a Search</a>
                     <a href="book-a-demo.html" class="footer-link">Book a Demo</a>
                     <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    <a href="our-data-methodology.html" class="footer-link">Data & Methodology</a>
                     <a href="about.html" class="footer-link">About Us</a>
                     <a href="contact.html" class="footer-link">Contact Us</a>
                 </div>
@@ -395,7 +413,7 @@
                 <!-- Contact & Socials -->
                 <div data-aos="fade-up" class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
                     <h5 class="footer-heading">Contact</h5>
-                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:connect@gulftp.com">connect@gulftp.com</a></p>
                     <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
                     
                     <div class="social-icons-modern">
@@ -452,5 +470,68 @@
             });
         });
     </script>
+
+<!-- Newsletter Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const newsletterForms = document.querySelectorAll('.newsletter-form');
+    newsletterForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const emailInput = form.querySelector('input[type="email"]');
+            const originalBtnHTML = submitBtn.innerHTML;
+            
+            // Create or get message container
+            let msgContainer = form.nextElementSibling;
+            if (!msgContainer || !msgContainer.classList.contains('newsletter-msg')) {
+                msgContainer = document.createElement('div');
+                msgContainer.classList.add('newsletter-msg', 'mt-2', 'small');
+                form.parentNode.insertBefore(msgContainer, form.nextSibling);
+            }
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            msgContainer.style.display = 'none';
+            
+            const data = {
+                form_type: 'Newsletter',
+                email: emailInput.value
+            };
+            
+            fetch('submit-form-simple.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                
+                msgContainer.style.display = 'block';
+                if (result.success) {
+                    msgContainer.innerHTML = '<span class="text-success"><i class="fa-solid fa-check-circle me-1"></i> Subscribed successfully!</span>';
+                    form.reset();
+                    setTimeout(() => { msgContainer.style.display = 'none'; }, 5000);
+                } else {
+                    msgContainer.innerHTML = '<span class="text-danger"><i class="fa-solid fa-exclamation-circle me-1"></i> ' + (result.error || "Subscription failed.") + '</span>';
+                }
+            })
+            .catch(error => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                msgContainer.style.display = 'block';
+                msgContainer.innerHTML = '<span class="text-danger"><i class="fa-solid fa-exclamation-circle me-1"></i> An error occurred.</span>';
+                console.error('Error:', error);
+            });
+        });
+    });
+});
+</script>
 </body>
+
 </html>

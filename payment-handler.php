@@ -52,13 +52,46 @@ try {
     // Continue anyway
 }
 
-// Return Stripe public key for client-side setup
+// Create Stripe Checkout Session
+$ch = curl_init('https://api.stripe.com/v1/checkout/sessions');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_USERPWD, $stripe_secret_key . ':');
+$stripe_data = [
+    'payment_method_types' => ['card'],
+    'line_items' => [
+        [
+            'price_data' => [
+                'currency' => 'usd',
+                'product_data' => [
+                    'name' => 'GCC Benchmark Search',
+                ],
+                'unit_amount' => 75000, // $750.00
+            ],
+            'quantity' => 1,
+        ],
+    ],
+    'mode' => 'payment',
+    'success_url' => 'https://gulftp.com/index.html?payment=success',
+    'cancel_url' => 'https://gulftp.com/book-search.html?payment=cancel',
+];
+// http_build_query works nicely for Stripe's expected x-www-form-urlencoded structure
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($stripe_data));
+$response = curl_exec($ch);
+$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+$session = json_decode($response, true);
+
+if ($httpcode != 200 || !isset($session['id'])) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Failed to create Stripe session', 'details' => $session]);
+    exit();
+}
+
+// Return Stripe session ID and public key for client-side redirection
 echo json_encode([
     'success' => true,
     'stripePublicKey' => STRIPE_PUBLISHABLE_KEY,
-    'amount' => $data['amount'],
-    'email' => $email,
-    'firstName' => $data['firstName'],
-    'message' => 'Ready to process payment'
+    'sessionId' => $session['id']
 ]);
 ?>

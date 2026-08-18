@@ -199,6 +199,7 @@ try {
             background-color: #f8f9fa;
         }
     </style>
+        <link rel="icon" type="image/jpeg" href="../favicon-final.jpeg">
 </head>
 <body>
     <div class="d-flex">

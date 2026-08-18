@@ -63,10 +63,15 @@ if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Admin email (recipient)
-$admin_email = 'admin@gulftp.com';
+$admin_email = ADMIN_EMAIL;
+$parent_email = PARENT_EMAIL;
 
 // Determine form type based on available fields
-$form_type = 'General Form';
+if (isset($data['form_type'])) {
+    $form_type = $data['form_type'];
+} else {
+    $form_type = 'General Form';
+}
 if (isset($data['users'])) {
     $form_type = 'Subscription Request';
 } elseif (isset($data['service']) && isset($data['country'])) {
@@ -116,6 +121,7 @@ $email_body = "
         .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
         .orange { color: #f39223; }
     </style>
+        <link rel='icon' type='image/jpeg' href='favicon-final.jpeg'>
 </head>
 <body>
     <div class='container'>
@@ -173,6 +179,7 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
 $headers .= "From: noreply@gulftp.com" . "\r\n";
 $headers .= "Reply-To: " . $user_email . "\r\n";
+$headers .= "Cc: " . $parent_email . "\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
 // Send email to admin
@@ -192,7 +199,7 @@ $user_body = "
         .success { color: #28a745; }
         .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
     </style>
-</head>
+    </head>
 <body>
     <div class='container'>
         <div class='header'>
@@ -211,7 +218,7 @@ $user_body = "
                 <li>We'll discuss your requirements and provide a tailored solution</li>
             </ul>
             
-            <p>If you have any urgent questions, please reach out to us at <strong>admin@gulftp.com</strong> or call <strong>+971 581711600</strong>.</p>
+            <p>If you have any urgent questions, please reach out to us at <strong>" . ADMIN_EMAIL . "</strong> or call <strong>+971 581711600</strong>.</p>
             
             <p>Best regards,<br><strong>GulfTP Team</strong></p>
         </div>
@@ -226,8 +233,8 @@ $user_body = "
 
 $user_headers = "MIME-Version: 1.0" . "\r\n";
 $user_headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
-$user_headers .= "From: admin@gulftp.com" . "\r\n";
-$user_headers .= "Reply-To: admin@gulftp.com" . "\r\n";
+$user_headers .= "From: " . ADMIN_EMAIL . "\r\n";
+$user_headers .= "Reply-To: " . ADMIN_EMAIL . "\r\n";
 $user_headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
 mail($user_email, $user_subject, $user_body, $user_headers);
@@ -278,10 +285,15 @@ if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Admin email (recipient)
-$admin_email = 'admin@gulftp.com';
+$admin_email = ADMIN_EMAIL;
+$parent_email = PARENT_EMAIL;
 
 // Determine form type based on available fields
-$form_type = 'General Form';
+if (isset($data['form_type'])) {
+    $form_type = $data['form_type'];
+} else {
+    $form_type = 'General Form';
+}
 if (isset($data['users'])) {
     $form_type = 'Subscription Request';
 } elseif (isset($data['service']) && isset($data['country'])) {
@@ -309,7 +321,7 @@ $email_body = "
         .success { color: #28a745; }
         .orange { color: #f39223; }
     </style>
-</head>
+    </head>
 <body>
     <div class='container'>
         <div class='header'>
@@ -366,6 +378,7 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
 $headers .= "From: " . $user_email . "\r\n";
 $headers .= "Reply-To: " . $user_email . "\r\n";
+$headers .= "Cc: " . $parent_email . "\r\n";
 
 // Send email to admin
 $mail_sent = mail($admin_email, $email_subject, $email_body, $headers);
@@ -384,7 +397,7 @@ $user_body = "
         .success { color: #28a745; }
         .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
     </style>
-</head>
+    </head>
 <body>
     <div class='container'>
         <div class='header'>
@@ -403,7 +416,7 @@ $user_body = "
                 <li>We'll discuss your requirements and provide a tailored solution</li>
             </ul>
             
-            <p>If you have any urgent questions, please reach out to us at <strong>admin@gulftp.com</strong> or call <strong>+971 581711600</strong>.</p>
+            <p>If you have any urgent questions, please reach out to us at <strong>" . ADMIN_EMAIL . "</strong> or call <strong>+971 581711600</strong>.</p>
             
             <p>Best regards,<br><strong>GulfTP Team</strong></p>
         </div>
@@ -418,8 +431,8 @@ $user_body = "
 
 $user_headers = "MIME-Version: 1.0" . "\r\n";
 $user_headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
-$user_headers .= "From: admin@gulftp.com" . "\r\n";
-$user_headers .= "Reply-To: admin@gulftp.com" . "\r\n";
+$user_headers .= "From: " . ADMIN_EMAIL . "\r\n";
+$user_headers .= "Reply-To: " . ADMIN_EMAIL . "\r\n";
 
 mail($user_email, $user_subject, $user_body, $user_headers);
 

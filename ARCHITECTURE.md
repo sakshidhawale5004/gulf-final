@@ -177,7 +177,7 @@ DB_USER=u852823366_admin
 DB_PASS=Gulftp@1234
 DB_NAME=u852823366_gulftp
 
-ADMIN_EMAIL=admin@gulftp.com
+ADMIN_EMAIL=connect@gulftp.com
 NOREPLY_EMAIL=noreply@gulftp.com
 
 STRIPE_SECRET_KEY=sk_live_...
@@ -298,28 +298,28 @@ CREATE TABLE form_responses (
 2. Verify form_type = 'Contact' in database
 3. Check admin dashboard shows "Contact" type
 4. Filter by "Contact" should show submission
-5. Email received by admin@gulftp.com
+5. Email received by connect@gulftp.com
 
 ### Scenario 2: Subscription Form
 1. Submit buy-subscription.html with users = "4-10 Users"
 2. Verify form_type = 'Subscription' in database
 3. Check admin dashboard shows "Subscription" type
 4. Filter by "Subscription" should show submission
-5. Email received by admin@gulftp.com
+5. Email received by connect@gulftp.com
 
 ### Scenario 3: Appointment Form
 1. Submit book-an-appointment.html with basic fields only
 2. Verify form_type = 'Appointment' in database
 3. Check admin dashboard shows "Appointment" type
 4. Filter by "Appointment" should show submission
-5. Email received by admin@gulftp.com
+5. Email received by connect@gulftp.com
 
 ### Scenario 4: Update Search Form
 1. Submit update-a-search.html with file + basic fields
 2. Verify form_type = 'Appointment' in database
 3. Check admin dashboard shows "Appointment" type
 4. Filter by "Appointment" should show both forms 3 & 4
-5. Email received by admin@gulftp.com
+5. Email received by connect@gulftp.com
 
 ---
 

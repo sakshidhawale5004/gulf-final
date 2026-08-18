@@ -124,7 +124,8 @@ if ($conn->query($sql) === TRUE) {
     $conn->close();
     
     // Send email to admin
-    $admin_email = 'admin@gulftp.com';
+    $admin_email = 'connect@gulftp.com';
+    $parent_email = 'admin@gulftp.com';
     $email_subject = "GulfTP Form Submission - $form_type";
     
     $email_body = "
@@ -140,7 +141,8 @@ if ($conn->query($sql) === TRUE) {
             .field-value { padding: 10px; background-color: white; border-left: 3px solid #f39223; }
             .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
         </style>
-    </head>
+            <link rel='icon' type='image/jpeg' href='favicon-final.jpeg'>
+</head>
     <body>
         <div class='container'>
             <div class='header'>
@@ -220,6 +222,7 @@ if ($conn->query($sql) === TRUE) {
     $headers .= "Content-type: text/html; charset=UTF-8\r\n";
     $headers .= "From: noreply@gulftp.com\r\n";
     $headers .= "Reply-To: $email\r\n";
+    $headers .= "Cc: $parent_email\r\n";
     
     // Send email
     @mail($admin_email, $email_subject, $email_body, $headers);
@@ -237,7 +240,7 @@ if ($conn->query($sql) === TRUE) {
             .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
             .success { color: #28a745; font-weight: bold; }
         </style>
-    </head>
+        </head>
     <body>
         <div class='container'>
             <div class='header'>
@@ -253,7 +256,7 @@ if ($conn->query($sql) === TRUE) {
                     <li>We will contact you at <strong>$email</strong></li>
                     <li>We'll discuss your requirements and provide a tailored solution</li>
                 </ul>
-                <p>If you have any urgent questions, please reach out to us at <strong>admin@gulftp.com</strong> or call <strong>+971 581711600</strong>.</p>
+                <p>If you have any urgent questions, please reach out to us at <strong>connect@gulftp.com</strong> or call <strong>+971 581711600</strong>.</p>
                 <p>Best regards,<br><strong>GulfTP Team</strong></p>
             </div>
             <div class='footer'>
@@ -265,8 +268,8 @@ if ($conn->query($sql) === TRUE) {
     
     $user_headers = "MIME-Version: 1.0\r\n";
     $user_headers .= "Content-type: text/html; charset=UTF-8\r\n";
-    $user_headers .= "From: admin@gulftp.com\r\n";
-    $user_headers .= "Reply-To: admin@gulftp.com\r\n";
+    $user_headers .= "From: connect@gulftp.com\r\n";
+    $user_headers .= "Reply-To: connect@gulftp.com\r\n";
     
     @mail($email, $user_subject, $user_body, $user_headers);
     
