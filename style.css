@@ -659,12 +659,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #94a3b8;
     padding: 0 0 30px;
     font-size: 0.95rem;
-    margin-top: 100px;
+    margin-top: 60px;
     border-top: none;
 }
 .footer-wave {
     position: absolute;
-    top: -119px;
+    top: -59px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -673,7 +673,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-wave svg {
     display: block;
     width: calc(100% + 4px);
-    height: 120px;
+    height: 60px;
     margin-left: -2px;
 }
 .footer-heading {
