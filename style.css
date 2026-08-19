@@ -1737,12 +1737,7 @@ section img,
 
 .experience-badge h2, .experience-badge p { color: #ffffff !important; }
 
-h1, h2, h3, .h1, .h2, .h3 {
-    text-transform: uppercase !important;
-    letter-spacing: 0.08em !important;
-    font-weight: 600 !important;
-    line-height: 1.35 !important;
-}
+
 
 /* Ensure sub-headings don't get too overwhelmingly large */
 h3, .h3 {
