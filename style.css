@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(2, 6, 23, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(8, 102, 75, 0.4) 0%, rgba(245, 145, 32, 0.3) 100%);
 }
 
 .hero-content {
@@ -810,7 +810,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(2, 6, 23, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(8, 102, 75, 0.4) 0%, rgba(245, 145, 32, 0.3) 100%);
     z-index: 1;
 }
 
@@ -883,7 +883,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 }
 
 .hero-overlay {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(2, 6, 23, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(8, 102, 75, 0.4) 0%, rgba(245, 145, 32, 0.3) 100%);
 }
 .hero-title { color: #ffffff !important; }
 .hero-subtitle { color: rgba(255, 255, 255, 0.85) !important; }
@@ -1750,4 +1750,33 @@ h3, .h3 {
 .btn-outline-custom-green:hover {
     background-color: var(--primary-green) !important;
     color: white !important;
+}
+
+/* Consistent Heading Colors */
+h1:not(.hero-title), h2, h3, h4, h5, h6, .title, .section-heading .title {
+    color: var(--primary-green) !important;
+}
+.hero-title {
+    color: #ffffff !important;
+}
+
+/* 3D Button Effects */
+.btn, .btn-conxora, .btn-orange, .btn-submit, .btn-outline-conxora {
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 0px rgba(8, 102, 75, 0.8) !important;
+    transform: translateY(0) !important;
+}
+.btn-orange {
+    box-shadow: 0 4px 0px rgba(200, 100, 10, 0.9) !important;
+}
+.btn-outline-conxora {
+    box-shadow: 0 4px 0px rgba(8, 102, 75, 0.3) !important;
+}
+.btn:hover, .btn-conxora:hover, .btn-orange:hover, .btn-submit:hover, .btn-outline-conxora:hover {
+    box-shadow: 0 6px 0px rgba(0,0,0,0.2) !important;
+    transform: translateY(-2px) !important;
+}
+.btn:active, .btn-conxora:active, .btn-orange:active, .btn-submit:active, .btn-outline-conxora:active {
+    box-shadow: 0 0px 0px rgba(0,0,0,0.2) !important;
+    transform: translateY(4px) !important;
 }
