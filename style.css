@@ -179,7 +179,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(8, 102, 75, 0.4) 0%, rgba(245, 145, 32, 0.3) 100%);
+    background: linear-gradient(
+  90deg,
+  rgba(0, 82, 70, 0.88) 0%,
+  rgba(0, 82, 70, 0.65) 35%,
+  rgba(0, 82, 70, 0.25) 65%,
+  rgba(0, 82, 70, 0.05) 100%
+);
 }
 
 .hero-content {
@@ -810,7 +816,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(8, 102, 75, 0.4) 0%, rgba(245, 145, 32, 0.3) 100%);
+    background: linear-gradient(
+  90deg,
+  rgba(0, 82, 70, 0.88) 0%,
+  rgba(0, 82, 70, 0.65) 35%,
+  rgba(0, 82, 70, 0.25) 65%,
+  rgba(0, 82, 70, 0.05) 100%
+);
     z-index: 1;
 }
 
@@ -883,7 +895,13 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 }
 
 .hero-overlay {
-    background: linear-gradient(135deg, rgba(8, 102, 75, 0.4) 0%, rgba(245, 145, 32, 0.3) 100%);
+    background: linear-gradient(
+  90deg,
+  rgba(0, 82, 70, 0.88) 0%,
+  rgba(0, 82, 70, 0.65) 35%,
+  rgba(0, 82, 70, 0.25) 65%,
+  rgba(0, 82, 70, 0.05) 100%
+);
 }
 .hero-title { color: #ffffff !important; }
 .hero-subtitle { color: rgba(255, 255, 255, 0.85) !important; }
