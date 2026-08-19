@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(8, 102, 75, 0.15) 0%, rgba(3, 31, 48, 0.35) 100%);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(2, 6, 23, 0.98) 100%);
 }
 
 .hero-content {
@@ -810,7 +810,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(rgba(10, 107, 79, 0.85), rgba(5, 72, 52, 0.95));
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(2, 6, 23, 0.98) 100%);
     z-index: 1;
 }
 
@@ -883,7 +883,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 }
 
 .hero-overlay {
-    background: linear-gradient(135deg, rgba(8, 102, 75, 0.9) 0%, rgba(5, 72, 52, 0.95) 100%) !important;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(2, 6, 23, 0.98) 100%);
 }
 .hero-title {
     color: #ffffff !important;
