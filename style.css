@@ -227,8 +227,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Floating Action Cards --- */
-.action-section {
-    margin-top: -80px;
+.action-section { background-color: var(--bg-light); 
+    margin-top:  0px ;
     position: relative;
     z-index: 20;
     padding-bottom: 80px;
@@ -791,7 +791,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
     .hero-title { font-size: 3rem; }
-    .action-section { margin-top: 40px; padding-bottom: 40px; }
+    .action-section { background-color: var(--bg-light);  margin-top: 40px; padding-bottom: 40px; }
     .navbar-custom { background: var(--bg-white); }
 }
 /* --- Unified Page Hero Styles --- */
@@ -956,7 +956,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 .delay-3 { animation-delay: 0.6s; }
 
 /* Conxora Service Cards (Overlapping) */
-.action-section { position: relative; z-index: 10; padding-bottom: 80px; padding-top: 40px; background-color: #f8fafc; }
+.action-section { background-color: var(--bg-light);  position: relative; z-index: 10; padding-bottom: 80px; padding-top: 40px; background-color: #f8fafc; }
 .conxora-card {
     background: white;
     padding: 40px 30px;
